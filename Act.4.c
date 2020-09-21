@@ -1,5 +1,27 @@
 #include<stdio.h>
 
+
+void capturar_enteros(){
+    int enteros[5];
+    int sum=0;
+    float prom;
+
+    for (size_t i = 0; i < 5; i++)
+    {
+        printf("\nIntroduce el numero %i: ",i+1);
+        scanf("%i",&enteros[i]);
+    }
+    for (size_t i = 0; i < 5; i++)
+    {
+        printf("%i\n",enteros[i]);
+        sum+=enteros[i];
+    }
+    prom=sum/5;
+    printf("La suma es: %i\n",sum);
+    printf("El promedio es: %.2f",prom);
+
+}
+
 int main(){
 
     int m;
@@ -13,7 +35,18 @@ int main(){
         printf("(4) Mostrar personajes\n");
         printf("(0) salir\n");
         scanf("%d",&m);
-        
+
+        switch(m){
+            case 1:
+                capturar_enteros();
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+        }
     } while (m!=0);
     
     return 0;
