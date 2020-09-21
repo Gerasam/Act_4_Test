@@ -22,9 +22,17 @@ void capturar_enteros(){
 
 }
 
+void mostrar(int n, char cadena[]){
+    for (size_t i = 0; i < n; i++)
+    {
+        printf("%s",cadena);
+    }
+}
+
 int main(){
 
-    int m;
+    int m,n;
+    char cadena[50];
 
     do
     {
@@ -41,6 +49,12 @@ int main(){
                 capturar_enteros();
                 break;
             case 2:
+                printf("\nEscribe una cadena de hasta 20 caracteres: ");
+                fflush(stdin);
+                fgets(cadena,sizeof(cadena),stdin);
+                printf("\ningresa las veces que se repetira: ");
+                scanf("%i",&n);
+                mostrar(n,cadena);
                 break;
             case 3:
                 break;
